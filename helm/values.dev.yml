@@ -10,7 +10,7 @@ image:
   pullPolicy: IfNotPresent
 
 imagePullSecrets:
-  - name: aws
+  - name: ecr-registry-secret
 nameOverride: ""
 fullnameOverride: ""
 
@@ -34,7 +34,7 @@ securityContext: {}
 
 service:
   type: NodePort
-  port: 9000
+  port: 3001
 
 ingress:
   enabled: false
